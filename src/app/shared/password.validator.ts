@@ -6,5 +6,5 @@ export function PasswordValidator(control :AbstractControl):{[key:string] :boole
     if(password.pristine || repassword.pristine){
         return null;
     }
-    return password  && repassword && password.value != repassword.value ? {'misMatch':true}:null;
+    return password  && repassword && password.value != repassword.value ? {'misMatch':true} : null;
 }
