@@ -23,7 +23,8 @@
   
   <div class="form-group">
     <label for="repassword">Re-Password</label>
-    <input id="repassword" formControlName="repassword" class="form-control" type="password" name="repassword">
+    <input id="repassword" [class.invalid]="registrationForm.errors?.misMatch" formControlName="repassword" class="form-control" type="password" name="repassword">
+    <span class="text-danger" *ngIf="registrationForm.errors?.misMatch">Password dont match</span>
   </div>
   
   <div formGroupName="address">
